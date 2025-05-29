@@ -1,0 +1,27 @@
+def verificar_senha():
+    while True:
+        senha = input("Digite uma senha (ou 'sair'): ").strip()
+
+        if senha.lower() == 'sair':
+            print("Saindo.")
+            break
+
+        if len(senha) < 8:
+            print("Senha fraca: Mínimo 8 caracteres.")
+            continue
+
+        tem_numero = False
+        for char in senha:
+            if char.isdigit():
+                tem_numero = True
+                break
+
+        if not tem_numero:
+            print("Senha fraca: Deve conter um número.")
+            continue
+
+        print("Senha forte!")
+        break
+
+if __name__ == "__main__":
+    verificar_senha()

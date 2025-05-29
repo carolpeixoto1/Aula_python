@@ -1,0 +1,27 @@
+def registrar_notas_simples():
+    notas = []
+    print("Digite as notas da turma (0 a 10). Digite 'fim' para encerrar.")
+
+    while True:
+        entrada = input("Digite a nota: ").strip().lower()
+
+        if entrada == 'fim':
+            break
+
+        try:
+            nota = float(entrada)
+            if 0 <= nota <= 10:
+                notas.append(nota)
+            else:
+                print("Nota inválida.")
+        except ValueError:
+            print("Entrada inválida.")
+
+    if notas:
+        media = sum(notas) / len(notas)
+        print(f"Média da turma: {media:.2f}")
+    else:
+        print("Nenhuma nota válida registrada.")
+
+if __name__ == "__main__":
+    registrar_notas_simples()

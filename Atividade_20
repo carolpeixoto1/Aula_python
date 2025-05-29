@@ -1,0 +1,28 @@
+Python
+
+def contar_pares_impares():
+    pares = 0
+    impares = 0
+
+    while True:
+        entrada = input("Número (ou 'fim'): ").strip().lower()
+
+        if entrada == 'fim':
+            break
+
+        try:
+            num = int(entrada)
+            if num % 2 == 0:
+                print("PAR")
+                pares += 1
+            else:
+                print("ÍMPAR")
+                impares += 1
+        except ValueError:
+            print("Entrada inválida.")
+
+    print(f"Pares: {pares}")
+    print(f"Ímpares: {impares}")
+
+if __name__ == "__main__":
+    contar_pares_impares()
