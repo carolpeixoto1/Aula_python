@@ -1,0 +1,10 @@
+def verificar_palindromo_simples(texto: str) -> str:
+   
+    texto_limpo = "".join(char for char in texto.lower() if char.isalnum())
+
+   
+    if texto_limpo == texto_limpo[::-1]:
+        return "Sim"
+    else:
+        return "Não"
+

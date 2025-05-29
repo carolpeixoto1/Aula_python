@@ -1,0 +1,18 @@
+def calcular_gorjeta_simples(valor_conta: float, porcentagem_gorjeta: float) -> float:
+    
+    return valor_conta * (porcentagem_gorjeta / 100)
+
+conta1 = 100.00
+gorjeta1_porcentagem = 10
+gorjeta1_calculada = calcular_gorjeta_simples(conta1, gorjeta1_porcentagem)
+print(f"Conta: R${conta1:.2f}, Gorjeta: {gorjeta1_porcentagem}% -> Valor da Gorjeta: R${gorjeta1_calculada:.2f}")
+
+conta2 = 75.50
+gorjeta2_porcentagem = 15
+gorjeta2_calculada = calcular_gorjeta_simples(conta2, gorjeta2_porcentagem)
+print(f"Conta: R${conta2:.2f}, Gorjeta: {gorjeta2_porcentagem}% -> Valor da Gorjeta: R${gorjeta2_calculada:.2f}")
+
+conta3 = 230.80
+gorjeta3_porcentagem = 20
+gorjeta3_calculada = calcular_gorjeta_simples(conta3, gorjeta3_porcentagem)
+print(f"Conta: R${conta3:.2f}, Gorjeta: {gorjeta3_porcentagem}% -> Valor da Gorjeta: R${gorjeta3_calculada:.2f}")
