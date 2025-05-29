@@ -1,0 +1,10 @@
+import requests
+
+cep= input("Digite o seu cep: ")
+resposta = requests.get(f"https://viacep.com.br/ws/{cep}/json")
+dados = resposta.json()
+
+print("Logradouro",dados["logradouro"])
+print("Bairro",dados["bairro"])
+print("Cidade",dados["localidade"])
+print("Estado",dados["uf"])

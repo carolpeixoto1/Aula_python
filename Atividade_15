@@ -1,0 +1,15 @@
+import requests
+
+def obter_piada_aleatoria():
+    url = "https://v2.jokeapi.dev/joke/Any?type=single"
+    resposta = requests.get(url)
+    dados = resposta.json()
+
+    if resposta.status_code == 200 and "joke" in dados:
+        print("Piada:")
+        print(dados["joke"])
+    else:
+        print("Não foi possível obter uma piada. Tente novamente mais tarde.")
+
+if __name__ == "__main__":
+    obter_piada_aleatoria()
